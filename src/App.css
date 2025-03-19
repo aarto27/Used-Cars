@@ -1,0 +1,111 @@
+/* CSS For Nav*/
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: sticky;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login button {
+    width: 100px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login button:hover {
+    background-color: #e9e8e8;
+    transform: scale(1.02);
+}
+
+.links a {
+    text-decoration: none;
+    color: rgb(98, 79, 79);
+    padding: 20px;
+    font-size: 18px;
+}
+
+.links a:hover {
+    color: rgb(44, 32, 32);
+}
+
+
+/* CSS For Search Bar*/
+
+.Search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.input {
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    width: 40%;
+    background-color: #fceeee;
+    outline: none;
+}
+
+.Search-btn {
+    width: 100px;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #fe9696;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    left: -100px;
+}
+
+.Search-btn:hover {
+    background-color: rgb(255, 84, 84);
+}
+
+/* CSS For Cards*/
+
+.Card-Holder{
+    width: 1500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.Card{
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 300px;
+    height: 350px;
+}
+
+.Card img{
+    width: 150px;
+}
+
+.Card h4{
+    font-size: 18px;
+}
