@@ -31,17 +31,20 @@ nav {
 
 .login button:hover {
     background-color: #e9e8e8;
-    transform: scale(1.02);
+    transform: scale(1.03);
 }
 
-.links a {
-    text-decoration: none;
+.links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
     color: rgb(98, 79, 79);
     padding: 20px;
     font-size: 18px;
 }
 
-.links a:hover {
+.links p:hover {
     color: rgb(44, 32, 32);
 }
 
@@ -81,7 +84,6 @@ nav {
 }
 
 /* CSS For Cards*/
-
 .Card-Holder{
     width: 1500px;
     margin: 0 auto;
@@ -98,14 +100,141 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    width: 300px;
-    height: 350px;
+    width: 400px;
+    height: 450px;
 }
 
-.Card img{
-    width: 150px;
+.Card:hover{
+    border: 2px solid #bfddfb;
 }
 
 .Card h4{
     font-size: 18px;
 }
+
+.Contanier{
+    display: flex;
+    align-items: safe;
+    justify-content: center;
+}
+
+/* CSS For Price*/
+.sorting {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.Sort-Btn{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin: 20px;
+}
+
+.Sort-Btn:hover {
+    background-color: #0056b3;
+}
+
+/* CSS For Modal*/
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px); 
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+    width: 90%;
+    max-width: 700px;
+    border: 2px solid rgba(255, 255, 255, 0.3); 
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); 
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 26px;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+.modal-image {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.modal-content h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.modal-content h3 {
+    font-size: 18px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.buy-now-btn {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.proceed-btn {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/*CSS Footer */
+.footer{
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(129, 191, 168, 0.195);
+    color:black;
+    padding: 20px;
+  } 
