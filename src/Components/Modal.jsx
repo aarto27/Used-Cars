@@ -13,9 +13,7 @@ const Modal = ({ car }) => {
 
     return (
         <>
-            <button className="buy-now-btn" onClick={openModal}>
-                Buy Now
-            </button>
+            <button className="buy-now-btn" onClick={openModal}>Buy Now</button>
             {isOpen && (
                 <div className="modal-overlay" onClick={closeModal}>
                     <div className="modal-content" onClick={(e) => e.stopPropagation()}>
