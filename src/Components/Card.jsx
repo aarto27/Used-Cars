@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import CarData from './CarData';
 import Modal from './Modal';
+import LikeBtn from "./LikeBtn";
+
 
 
 function Card({  setFilteredCars,filteredCars }) { 
@@ -57,6 +59,8 @@ function Card({  setFilteredCars,filteredCars }) {
             <h3>{item.name}</h3>
             <h4>Fuel Type: {item.fuel_type}</h4>
             <h3 style={{ color: 'green' }}>Price: ${item.price}</h3>
+            <LikeBtn />
+
              {/* Render Modal for each car */}
              <Modal car={item} />
         </div>
