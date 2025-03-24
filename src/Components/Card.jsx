@@ -13,7 +13,7 @@ function Card({  setFilteredCars,filteredCars }) {
       if (searchValue.trim() === "") {
           setFilteredCars(CarData);
         }
-  }, [searchValue]);
+  }, [searchValue]);  
     
     const handleInputChange = (event) => {
       setSearchValue(event.target.value);
