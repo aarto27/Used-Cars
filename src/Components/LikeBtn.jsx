@@ -10,7 +10,6 @@ function LikeBtn() {
   return (
     <div><p onClick={toggle}>
         {isLiked ? "❤️ " : "♡"}
-       
         </p></div>
   )
 }
