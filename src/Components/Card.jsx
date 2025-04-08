@@ -2,13 +2,23 @@ import React, { useEffect, useState } from 'react';
 import CarData from './CarData';
 import Modal from './Modal';
 import LikeBtn from "./LikeBtn";
+import axios from 'axios'
 
 
 
 function Card({  setFilteredCars,filteredCars }) { 
 
     const [searchValue, setSearchValue] = useState("");
-
+    const [data, setData] = useState([]);
+    const Cars = async () => {
+      const response = await axios.get('https://mocki.io/v1/a0cb3516-3659-4918-8f3e-835b12e4d0b6');
+      setData(response.data);
+    };
+    useEffect(() => {
+      Cars();
+    }, []);
+    console.log("Data====>",data);
+   
     useEffect(() => {
       if (searchValue.trim() === "") {
           setFilteredCars(CarData);

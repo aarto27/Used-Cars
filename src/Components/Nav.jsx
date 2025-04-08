@@ -1,6 +1,5 @@
 import React from 'react'
 import CarData from './CarData';
-import Login from './Login.jsx'
 
 function Nav({ setFilteredCars }) {
 
