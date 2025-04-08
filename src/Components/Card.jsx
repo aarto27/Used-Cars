@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import CarData from './CarData';
 import Modal from './Modal';
 import LikeBtn from "./LikeBtn";
 import axios from 'axios'
@@ -17,11 +16,17 @@ function Card({  setFilteredCars,filteredCars }) {
     useEffect(() => {
       Cars();
     }, []);
-    console.log("Data====>",data);
    
+   
+    const newData = data.map((elem)=>{
+      return {
+        ...elem
+        }
+    })
+
     useEffect(() => {
-      if (searchValue.trim() === "") {
-          setFilteredCars(CarData);
+      if (data.length > 0) {
+        setFilteredCars(data);
         }
   }, [searchValue]);  
     
@@ -30,19 +35,19 @@ function Card({  setFilteredCars,filteredCars }) {
     };
  
     const handleSearch = () => {
-    const filtered = CarData.filter((Car) =>
+    const filtered = data.filter((Car) =>
     Car.name.toLowerCase().includes(searchValue.toLowerCase()) || 
     Car.fuel_type.toLowerCase().includes(searchValue.toLowerCase())
     );
     setFilteredCars(filtered);
   };
     const sorting = () => {
-    const sortedLess = [...CarData].sort((a, b) => a.price - b.price);
+    const sortedLess = [...data].sort((a, b) => a.price - b.price);
     setFilteredCars(sortedLess);
     console.log("Sorted Data:",sortedLess);
   };
     const sortH = () =>{
-    const sortedHigh = [...CarData].sort((a, b) => b.price - a.price);
+    const sortedHigh = [...data].sort((a, b) => b.price - a.price);
     setFilteredCars(sortedHigh);
     console.log("Sorted Data:",sortedHigh);
   }
